@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table, tr, td {
+        border: solid 2px black;
+        padding: 5px;
+    }
+    table {
+        border-collapse: collapse;
+        margin-top: 40px;
+    }
+</style>
+<body>
+    <h1>DANH MỤC HÀNH HÓA</h1>
+    <table>
+        <tr>
+            <td>Iphone 9</td>
+            <td>$2700</td>
+            <td><button onclick="them(this)">Them</button></td>
+        </tr>
+        <tr>
+            <td>Samsung Star</td>
+            <td>$1500</td>
+            <td><button onclick="them(this)">Them</button></td>
+        </tr>
+        <tr>
+            <td>Nokia 2020</td>
+            <td>$1200</td>
+            <td><button onclick="them(this)">Them</button></td>
+        </tr>
+        <tr>
+            <td>Sony Xperia</td>
+            <td>$1700</td>
+            <td><button onclick="them(this)">Them</button></td>
+        </tr>
+    </table>
+
+    <div>
+    <h1>GIỎ HÀNG CỦA BẠN</h1>
+     <div id="not-empty">
+        <table border="1" id="cart"></table>
+        <h3>TỔNG SỐ TIỀN: $<span id="tong">0</span></h3>
+     </div>
+    <script src="./main.js"></script>
+</body>
+</html>

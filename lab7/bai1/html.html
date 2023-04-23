@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab7 bài 1</title>
+</head>
+    <style>
+        div {
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        .divi2{
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="divi1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <img width="300" src="./FB_IMG_1607941321836.jpg" alt="" id="drag1" draggable="true" ondragstart="dragStart(event)" />
+    <div class="divi2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <img width="300" src="./277175956_511039597359972_8178093940392983347_n.jpg" alt="" id="drag2" draggable="true" ondragstart="dragStart(event)" />
+    <script>
+   
+        function dragStart(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+                }
+
+        function allowDrop(ev){
+                ev.preventDefault();
+        }
+
+        function drop(ev){
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data))
+        }
+        
+
+    </script>
+
+</body>
+</html>
